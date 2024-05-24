@@ -57,8 +57,8 @@ const NTREEBINS_U32: u32 = NTREEBINS as u32;
 // Page size in wasm32 is 64 KB.
 // Default granularity is 1 page per allocation.
 // Each allocation triggers a major GC in chromium under memory pressure.
-// We increase this to 64 pages per allocation to reduce the amount of GC runs.
-const DEFAULT_GRANULARITY: usize = 64 * 64 * 1024;
+// We increase this to 1024 pages per allocation to reduce the amount of GC runs.
+const DEFAULT_GRANULARITY: usize = 64 * 1024 * 1024;
 const DEFAULT_TRIM_THRESHOLD: usize = 2 * 1024 * 1024;
 const MAX_RELEASE_CHECK_RATE: usize = 4095;
 
